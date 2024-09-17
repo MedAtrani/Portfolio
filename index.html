@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Mohamed Atrani - Ingénieur électromécanicien</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3a4750;
+            --secondary-color: #00adb5;
+            --accent-color: #ff5722;
+            --text-color: #222831;
+            --bg-color: #eeeeee;
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            color: var(--primary-color);
+        }
+        .experience-grid, .education-grid, .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .experience-card, .education-card, .project-card {
+            background-color: var(--bg-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .experience-card:hover, .education-card:hover, .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .skill-tag:hover {
+            background-color: var(--accent-color);
+        }
+        .profile-images {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+        .profile-image {
+            width: 45%;
+            max-width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            .profile-images {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-image {
+                width: 80%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mohamed Atrani</h1>
+        <p>Ingénieur électromécanicien spécialisé en validation et systèmes d'énergie</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#education">Formation</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Je suis un ingénieur électromécanicien passionné par les systèmes énergétiques et la validation de composants pour véhicules électriques. Mon expertise couvre la validation de moteurs électriques, de batteries et d'unités de contrôle. Je m'intéresse particulièrement aux projets de recherche et j'ai démontré de solides compétences techniques et de leadership.</p>
+            
+            <div class="profile-images">
+                <img src="c:\Users\Atrani\Downloads\WhatsApp_Image_2024-09-17_at_21.36.37-removebg-preview.png" alt="Mohamed Atrani - Portrait professionnel" class="profile-image">
+                <img src="c:\Users\Atrani\Downloads\WhatsApp_Image_2024-09-17_at_21.37.05-removebg-preview.png" alt="Mohamed Atrani - Photo de travail" class="profile-image">
+            </div>
+        </section>
+        <section id="expertise">
+            <h2>Expertise</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Matlab-Simulink</span>
+                <span class="skill-tag">VBA/Python</span>
+                <span class="skill-tag">Installations photovoltaïques</span>
+                <span class="skill-tag">Powertrain</span>
+                <span class="skill-tag">Unité de contrôle de véhicule électrique</span>
+                <span class="skill-tag">Moteur électrique</span>
+                <span class="skill-tag">Protocoles de communication</span>
+                <span class="skill-tag">Système de gestion de batterie (BMS)</span>
+                <span class="skill-tag">Post-traitement des gaz</span>
+                <span class="skill-tag">Concerto / INCA / MDA / Canalyzer</span>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Expérience professionnelle</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>CAPGEMINI ENGINEERING</h3>
+                    <p><em>Casablanca, Maroc - Septembre 2023 à aujourd'hui</em></p>
+                    <ul>
+                        <li>Gestion d'équipes pilotes</li>
+                        <li>Ingénieur de validation de tests (BMS)</li>
+                        <li>Ingénieur de validation de tests (xEV)</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>FEV NA (Centre de test d'Oued Zem)</h3>
+                    <p><em>Oued Zem, Maroc - Décembre 2022</em></p>
+                    <ul>
+                        <li>Planification des demandes de tests clients</li>
+                        <li>Préparation de l'instrumentation des véhicules</li>
+                        <li>Configuration du banc à rouleaux</li>
+                        <li>Exécution des tests et analyse des données</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>AMEE : Agence Marocaine pour l'Efficacité Énergétique</h3>
+                    <p><em>Rabat, Maroc - Mars 2021 à Septembre 2021</em></p>
+                    <ul>
+                        <li>Conception et optimisation d'un système photovoltaïque pour une usine textile à Casablanca</li>
+                        <li>Réalisation d'études de faisabilité et d'optimisation énergétique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Formation</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Doctorat en Philosophie (PhD)</h3>
+                    <p><em>École Nationale Supérieure d'Informatique et d'Analyse des Systèmes (ENSIAS)</em></p>
+                    <p>2023 - 2026 (en cours)</p>
+                </div>
+                <div class="education-card">
+                    <h3>Diplôme d'Ingénieur Électromécanicien</h3>
+                    <p><em>École Nationale Supérieure des Mines de Rabat (Ex : ENIM)</em></p>
+                    <p>2019 - 2022</p>
+                </div>
+                <div class="education-card">
+                    <h3>Baccalauréat en Sciences et Technologies Électriques</h3>
+                    <p><em>Lycée Moulay Ismail, Meknès</em></p>
+                    <p>2016 - 2017</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projets clés</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Validation de systèmes de gestion de batterie (BMS)</h3>
+                    <p>Chez Capgemini Engineering :</p>
+                    <ul>
+                        <li>Suivi des procédures de test des fournisseurs</li>
+                        <li>Analyse des tests de cyclage, capacité et résistance interne</li>
+                        <li>Rapports hebdomadaires et mensuels sur les KPI</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Validation de véhicules électriques (xEV)</h3>
+                    <p>Chez Capgemini Engineering :</p>
+                    <ul>
+                        <li>Résolution de problèmes liés à la limitation du couple</li>
+                        <li>Validation des fonctionnalités de l'unité de contrôle du véhicule</li>
+                        <li>Préparation de rapports détaillés et de synthèses de tests</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Optimisation photovoltaïque pour une usine textile</h3>
+                    <p>À l'AMEE :</p>
+                    <ul>
+                        <li>Étude de faisabilité et dimensionnement du système</li>
+                        <li>Estimation de la production énergétique</li>
+                        <li>Intégration de mesures d'efficacité énergétique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <p>Email: mohamedatrani7@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mohamed-atrani-bb0a821ab/" target="_blank">linkedin.com/in/mohamed-atrani-bb0a821ab/</a></p>
+            <p>Téléphone: 0635666983</p>
+            <p>Adresse: Rue Atlass, Ain Leuh</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mohamed Atrani - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
